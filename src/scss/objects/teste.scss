@@ -1,0 +1,34 @@
+.teste {
+     font-size: 2rem; // 2 x o tamanho configurado como base do HTML (10px)
+     font-family: sans-serif;
+     font-weight: bold;
+	text-align: center;
+	padding: 1rem;
+	background-color: black;
+	color: gray;
+	
+	@include mq(xs) {
+		background-color: yellow;
+	}
+	@include mq(sm) {
+		background-color: orange;
+	}
+	@include mq(md) {
+		background-color: red;
+	}
+	@include mq(lg) {
+		background-color: green;
+	}
+	@include mq(xl) {
+		background-color: blue;
+	}
+	> .row {
+		padding: 5px;
+		background-color: pink;
+		> .c1, .c2, .c3, .c4 {
+			padding: 10px 0;
+			background-color: oldlace;
+			border: 1px solid red;
+		}
+	} 
+}
