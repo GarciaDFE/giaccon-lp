@@ -1265,6 +1265,10 @@ img {
   max-width: 100%;
   height: auto; }
 
+.wrap-main {
+  margin: 0;
+  padding: 0; }
+
 .build-section {
   width: 100%;
   margin: 0 auto;
@@ -1315,7 +1319,8 @@ img {
       font-size: 1.6em;
       font-weight: 400;
       line-height: 3rem;
-      color: black; }
+      color: black;
+      margin-left: 15px; }
       .company-section .contacts .contact .icon {
         width: 14px;
         margin-right: 5px; }
@@ -1326,7 +1331,9 @@ img {
       .company-section .company .logo {
         margin-top: 20px; }
       .company-section .contacts .name {
-        text-align: left; } }
+        text-align: left; }
+      .company-section .contacts .contact {
+        margin-left: 0; } }
 
 .product-section {
   width: 100%;
@@ -1335,7 +1342,7 @@ img {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  margin-bottom: 50px; }
+  margin: 0; }
   .product-section .title {
     font-weight: 700;
     font-size: 2.2rem;

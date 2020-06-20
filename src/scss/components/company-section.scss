@@ -34,6 +34,7 @@
          font-weight: 400;
          line-height: 3rem;
          color: black;
+         margin-left: 15px;
          .icon {
             width: 14px;
             margin-right: 5px;
@@ -51,7 +52,10 @@
       .contacts {
          .name {
             text-align: left;
-         }      
+         }
+         .contact {
+            margin-left: 0;
+         }
       }
    }
 }
