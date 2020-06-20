@@ -1,0 +1,24 @@
+.catalogo-section {
+   width: 100%;
+   font-size: 2rem;
+   line-height: 2.6rem;
+   text-align: center;
+   color: white;
+   padding: 30px;
+   background-image: linear-gradient(to top, #0ba360 0%, green 30%, green 70%,#0ba360 100%);
+   .wrap-text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .text {
+         font-weight: 400;
+         .destak {
+            font-weight: 700;
+         }
+         .icon {
+            width: 25px;
+            margin: 0 10px -7px;
+         }      
+      }
+   }
+}
