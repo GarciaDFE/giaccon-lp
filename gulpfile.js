@@ -21,14 +21,14 @@ function compilaSASS() {
 }
 
 //Minificar/concatenar/renomear arquivos CSS da pasta SRC para pasta DIST
-// function optimizeCSS() {
-//   return gulp
-//     .src(["src/css/**/*.css"])
-//     .pipe(cssmin())
-//     .pipe(concat("styles.css"))
-//     .pipe(rename({ suffix: ".min" }))
-//     .pipe(gulp.dest("dist/css"));
-// }
+function optimizeCSS() {
+  return gulp
+    .src(["src/css/**/*.css"])
+    .pipe(cssmin())
+    .pipe(concat("styles.css"))
+    .pipe(rename({ suffix: ".min" }))
+    .pipe(gulp.dest("dist/css"));
+}
 
 // Minificar/concatenar/renomear arquivos JS Geral Dev
 // function optimizeJSGeneral() {
@@ -61,26 +61,26 @@ function compilaSASS() {
 // }
 
 // Otimizar arquivos de imagens Dev
-// function optimizeIMG() {
-//   return gulp
-//     .src("src/img/**/*")
-//     .pipe(imagemin())
-//     .pipe(gulp.dest("dist/img"));
-// }
+function optimizeIMG() {
+  return gulp
+    .src("src/img/**/*")
+    .pipe(imagemin())
+    .pipe(gulp.dest("dist/img"));
+}
 
 // Renomear links de CSS e JS minificados carregados no HTML Dev
-// function replaceHTML() {
-//   return gulp
-//     .src(["src/*.html"])
-//     .pipe(
-//       htmlreplace({
-//         allcss: "css/styles.min.css",
-//         alljs: "js/scripts.min.js",
-//         carousel: "js/carousel.min.js"
-//       })
-//     )
-//     .pipe(gulp.dest("dist/"));
-// }
+function replaceHTML() {
+  return gulp
+    .src(["src/*.html"])
+    .pipe(
+      htmlreplace({
+        allcss: "css/styles.min.css",
+        // alljs: "js/scripts.min.js",
+        // carousel: "js/carousel.min.js"
+      })
+    )
+    .pipe(gulp.dest("dist/"));
+}
 
 // Otimizar arquivos HTML
 // function optimizeHTML() {
@@ -108,14 +108,14 @@ function watch() {
 // Agrupar e executar tarefas
 const build = gulp.parallel(
   compilaSASS,
-  // optimizeCSS,
+  optimizeCSS,
   // optimizeJSGeneral,
   // optimizeJSCarousel,
   // optimizeJSForm,
-  // optimizeIMG,
-  // replaceHTML,
+  optimizeIMG,
+  replaceHTML,
   // optimizeHTML,
   // copyFiles,
-  watch
+  // watch
 );
 gulp.task("default", build);
